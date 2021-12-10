@@ -22,6 +22,7 @@
 
 int main()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	int const mysize = sizeof(int);
 	LPVOID ptr = VirtualAlloc(NULL, mysize, MEM_COMMIT, PAGE_NOACCESS);
 	DWORD result = 0;
@@ -44,11 +45,11 @@ int main()
 	int* myarray = (int *)malloc(sizeof(int) * numero);
 	free (myarray);
 
-	int * test = new int;
-	int * test1 = new int;
+	int * test = DBG_NEW  int;
+	int * test1 = DBG_NEW  int;
 	//delete test;
 	//delete test1;
-	_CrtDumpMemoryLeaks();
+	//_CrtDumpMemoryLeaks();
 
 
 
