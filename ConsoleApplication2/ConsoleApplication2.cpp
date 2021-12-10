@@ -11,6 +11,7 @@
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <crtdbg.h>
+#include "leak_detector_c.h"
 
 #ifdef _DEBUG
 #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
@@ -52,7 +53,7 @@ int main()
 	//_CrtDumpMemoryLeaks();
 
 
-
+	atexit(report_mem_leak);
 }
 
 // Per eseguire il programma: CTRL+F5 oppure Debug > Avvia senza eseguire debug
