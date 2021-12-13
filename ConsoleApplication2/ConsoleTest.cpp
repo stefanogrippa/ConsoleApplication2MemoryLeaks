@@ -8,7 +8,7 @@
 
 
 
-void ConsoleTest::mytestVirtualMemory()
+void ConsoleTestVirtualMemory::mytestVirtualMemory()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	int const mysize = sizeof(int);

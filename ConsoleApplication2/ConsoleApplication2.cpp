@@ -4,7 +4,7 @@
 
 int main()
 {
-	ConsoleTest miotest;
+	ConsoleTestVirtualMemory miotest;
 	miotest.mytestVirtualMemory();
 	//_CrtDumpMemoryLeaks();
 

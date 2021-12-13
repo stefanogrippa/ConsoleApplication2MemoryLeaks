@@ -1,10 +1,11 @@
 #pragma once
 
 
-class ConsoleTest
+class ConsoleTestVirtualMemory
 {
 public:
-	ConsoleTest(){}
+	ConsoleTestVirtualMemory(){}
+	virtual ~ConsoleTestVirtualMemory() {}
 	void mytestVirtualMemory();
 	
 };
