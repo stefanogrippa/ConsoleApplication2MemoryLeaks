@@ -54,15 +54,15 @@
 ////	//delete test1;
 ////}
 
-int main()
-{
-	ConsoleTest miotest;
-	miotest.mytest();
-	//_CrtDumpMemoryLeaks();
-
-
-	//atexit(report_mem_leak);
-}
+//int main()
+//{
+//	ConsoleTest miotest;
+//	miotest.mytest();
+//	//_CrtDumpMemoryLeaks();
+//
+//
+//	//atexit(report_mem_leak);
+//}
 
 // Per eseguire il programma: CTRL+F5 oppure Debug > Avvia senza eseguire debug
 // Per eseguire il debug del programma: F5 oppure Debug > Avvia debug
