@@ -173,9 +173,17 @@ void report_mem_leak(void)
 	MEM_LEAK * leak_info;
 
 	FILE * fp_write = NULL;
-	fopen_s(&fp_write, OUTPUT_FILE, "wt");
+	char* myFileName = "c:\\Users\\stefa\\leakage.txt";
+	errno_t  err = fopen_s(&fp_write, myFileName, "w");
+	if (err != 0)
+	
+	{
+		char* myBuffer = (char*) malloc(1000);
+		errno_t  err1 = strerror_s(myBuffer, sizeof(myBuffer), err);
+		fprintf(stderr, "cannot open file '%s': %s\n",
+			myFileName, myBuffer);
+	}
 	char info[1024];
-
 	if(fp_write != NULL)
 	{
 		sprintf_s(info, sizeof(info), "%s\n", "Memory Leak Summary");
