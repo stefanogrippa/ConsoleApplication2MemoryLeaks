@@ -11,7 +11,7 @@ int test()
 	return ret;
 }
 
-int main()
-{
-	return test();
-}
+//int main()
+//{
+//	return test();
+//}

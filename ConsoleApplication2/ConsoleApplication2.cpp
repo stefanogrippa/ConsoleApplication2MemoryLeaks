@@ -22,40 +22,45 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-//int main()
-//{
-//	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-//	int const mysize = sizeof(int);
-//	LPVOID ptr = VirtualAlloc(NULL, mysize, MEM_COMMIT, PAGE_NOACCESS);
-//	DWORD result = 0;
-//	if (ptr == NULL)
-//	{
-//		result = GetLastError();
-//	}
-//	
-//    std::cout << "Hello World!\n";
-//	DWORD resultFree = 0;
-//	bool ret = VirtualFree(ptr, mysize, MEM_DECOMMIT);
-//	if (!ret)
-//	{
-//		resultFree = GetLastError();
-//	}
-//
-//
-//
-//	int numero = 100;
-//	int* myarray = (int *)malloc(sizeof(int) * numero);
-//	//free (myarray);
-//
-//	//int * test = new  int;
-//	//int * test1 = new  int;
-//	//delete test;
-//	//delete test1;
-//	//_CrtDumpMemoryLeaks();
-//
-//
-//	atexit(report_mem_leak);
-//}
+void mytest()
+{
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	int const mysize = sizeof(int);
+	LPVOID ptr = VirtualAlloc(NULL, mysize, MEM_COMMIT, PAGE_NOACCESS);
+	DWORD result = 0;
+	if (ptr == NULL)
+	{
+		result = GetLastError();
+	}
+
+	std::cout << "Hello World!\n";
+	DWORD resultFree = 0;
+	bool ret = VirtualFree(ptr, mysize, MEM_DECOMMIT);
+	if (!ret)
+	{
+		resultFree = GetLastError();
+	}
+
+
+
+	int numero = 100;
+	//int* myarray = (int *)malloc(sizeof(int) * numero);
+	//free (myarray);
+
+	//int * test = new  int;
+	//int * test1 = new  int;
+	//delete test;
+	//delete test1;
+}
+
+int main()
+{
+	mytest();
+	//_CrtDumpMemoryLeaks();
+
+
+	//atexit(report_mem_leak);
+}
 
 // Per eseguire il programma: CTRL+F5 oppure Debug > Avvia senza eseguire debug
 // Per eseguire il debug del programma: F5 oppure Debug > Avvia debug
