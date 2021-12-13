@@ -1,6 +1,6 @@
 #include	<malloc.h>
 #include	"leak_detector_c.h"
-#include <stdlib.h> 
+#include <stdlib.h>  // per atexit()
 int test()
 {
 	char * ptr1 = (char *)calloc(10, sizeof(char));
@@ -13,5 +13,7 @@ int test()
 
 //int main()
 //{
+//	//return mytest();
 //	return test();
 //}
+ 
