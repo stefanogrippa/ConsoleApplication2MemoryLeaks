@@ -167,10 +167,10 @@ void remove_mem_info (void * mem_ref)
 /*
  * writes all info of the unallocated memory into a file
  */
-void report_mem_leak(void)
+void report_mem_leak()
 {
 	//unsigned short index;
-	MEM_LEAK * leak_info;
+	MEM_LEAK * leak_info = NULL;
 
 	FILE * fp_write = NULL;
 	char* myFileName = "c:\\Users\\stefa\\leakage.txt";
