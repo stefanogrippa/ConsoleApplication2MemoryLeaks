@@ -4,23 +4,9 @@
 #include <windows.h>
 #include <Memoryapi.h>
 
-//#include <malloc.h>
 
 
-// https://docs.microsoft.com/it-it/visualstudio/debugger/finding-memory-leaks-using-the-crt-library?view=vs-2022
-#define _CRTDBG_MAP_ALLOC
-//#include <stdlib.h>
-#include <crtdbg.h>
-//#include "leak_detector_c.h"
 
-// https://stackoverflow.com/questions/5421754/what-is-the-usage-of-debug-new-and-file
-#define DEBUG_NEW new(__FILE__, __LINE__)
-
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#undef THIS_FILE
-static char THIS_FILE[] = __FILE__;
-#endif
 
 void ConsoleTest::mytestVirtualMemory()
 {
