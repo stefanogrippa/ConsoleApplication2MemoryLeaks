@@ -1,4 +1,4 @@
-#include "ConsoleTest.h"
+#include "ConsoleTestVirtualMemory.h"
 
 #include <iostream>
 #include <windows.h>
