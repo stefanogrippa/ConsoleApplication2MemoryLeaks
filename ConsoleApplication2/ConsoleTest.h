@@ -5,5 +5,6 @@ class ConsoleTest
 {
 public:
 	ConsoleTest(){}
-	void mytest();
+	void mytestVirtualMemory();
+	
 };
